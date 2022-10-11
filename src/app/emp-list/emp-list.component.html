@@ -1,0 +1,13 @@
+<p>emp-list works!</p>
+
+<table>
+    <tr *ngFor="let i of employees">
+        <td>{{i.eid}}</td>
+        <td>{{i.ename}}</td>
+        <td>{{i.salary}}</td>
+        <td>{{i.doj}}</td>
+        <td>{{i.d.did}}</td>
+    </tr>
+</table>
+
+{{employees|json}}

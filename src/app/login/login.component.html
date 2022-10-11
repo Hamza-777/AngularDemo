@@ -1,0 +1,15 @@
+<p>login works! {{firstnumber}}</p>
+
+Template Driven Form: 
+<!-- <form>
+    Enter a number: <input type="number" [(ngModel)]="firstnumber" [ngModelOptions]="{standalone: true}" />
+    <input type="submit" (click)="Validate()" value="Login" />
+</form> -->
+
+<form>
+    Enter a number: <input type="number" #num />
+    Enter a number: <input type="number" #num2 />
+    <input type="submit" (click)="Validate(num.value, num2.value)" value="Login" />
+</form>
+
+{{msg}}
