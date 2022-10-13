@@ -1,1 +1,9 @@
-<p>register works!</p>
+<form #empForm="ngForm" (ngSubmit)="AddEmp()">
+    Eid: <input type="number" name="eid" [(ngModel)]="employee.eid" #eid="ngModel" required />
+    Ename: <input type="text" name="ename" [(ngModel)]="employee.ename" #ename="ngModel" required />
+    Salary: <input type="number" name="salary" min="1000" max="100000" [(ngModel)]="employee.salary" #salary="ngModel" required />
+    <div *ngIf="salary.errors?.['min']">Minimum Salary Should be 1000</div>
+    <div *ngIf="salary.errors?.['max']">Maximum Salary Should be 100000</div>
+    Date Of Joining: <input type="date" name="doj" [(ngModel)]="employee.doj" #doj="ngModel" required />
+    <input type="submit" [disabled]="!empForm.valid" value="Register" />
+</form>

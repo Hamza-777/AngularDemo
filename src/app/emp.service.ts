@@ -19,4 +19,8 @@ employeeList:Employee[];
   GetEmployees():any {
     return this.employeeList;
   }
+
+  AddEmployee(emp:Employee):void {
+    this.employeeList.push(emp);
+  }
 }

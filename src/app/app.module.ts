@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { EmpListComponent } from './emp-list/emp-list.component';
+import { HelloWorldNgifComponent } from './hello-world-ngif/hello-world-ngif.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    EmpListComponent
+    EmpListComponent,
+    HelloWorldNgifComponent
   ],
   imports: [
     BrowserModule,
